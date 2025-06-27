@@ -1,0 +1,33 @@
+{
+  "bsonType": "object",
+  "required": ["userId", "followUserId"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "userId": {
+      "bsonType": "string",
+      "description": "当前用户ID",
+      "title": "用户ID"
+    },
+    "followUserId": {
+      "bsonType": "string",
+      "description": "被关注的用户ID",
+      "title": "被关注用户ID"
+    },
+    "createdAt": {
+      "bsonType": "timestamp",
+      "description": "关注时间",
+      "title": "关注时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+} 

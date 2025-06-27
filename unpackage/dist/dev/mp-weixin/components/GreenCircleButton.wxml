@@ -1,0 +1,1 @@
+<view class="green-circle-btn flex items-center" bindtap="{{c}}"><view class="circle-bg"><icon-image wx:if="{{a}}" u-i="68e2ceae-0" bind:__l="__l" u-p="{{a}}"></icon-image></view><text class="text-sm ml-2">{{b}}</text></view>

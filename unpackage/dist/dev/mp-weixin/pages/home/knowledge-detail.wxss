@@ -1,0 +1,196 @@
+
+.container {
+  min-height: 100vh;
+  padding-bottom: 20px;
+  background-color: #f5f5f5;
+}
+.header {
+  background-color: #4CAF50;
+  padding: 44px 0 0;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  height: 56px;
+}
+.back-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.back-icon {
+  width: 18px;
+  height: 18px;
+}
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  flex: 1;
+  text-align: center;
+}
+.more-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.more-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+.loading-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #e5e7eb;
+  border-top-color: #4CAF50;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+to { transform: rotate(360deg);
+}
+}
+
+/* 错误提示 */
+.error-container {
+  padding: 16px;
+}
+.error-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-text {
+  color: #ef4444;
+  margin-bottom: 8px;
+}
+.error-message {
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.retry-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+}
+
+/* 知识内容 */
+.knowledge-content {
+  padding-bottom: 70px;
+}
+.title-section {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 1px;
+}
+.knowledge-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  display: block;
+}
+.content-section {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 10px;
+}
+.content-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 12px;
+}
+.content-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+.image-section {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 10px;
+}
+.knowledge-image {
+  width: 100%;
+  border-radius: 8px;
+}
+.tags-time-section {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.tag-pill {
+  display: inline-block;
+  font-size: 12px;
+  color: #4CAF50;
+  background-color: #e8f5e9;
+  padding: 4px 12px;
+  border-radius: 16px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.time-container {
+  margin-left: 10px;
+}
+.time-text {
+  font-size: 12px;
+  color: #999;
+}
+.stats-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  padding: 12px 16px;
+}
+.stats-container {
+  display: flex;
+  justify-content: center;
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  color: #666;
+}
+.stat-item.liked {
+  color: #ff5252;
+}
+.stat-item .iconfont {
+  margin-right: 4px;
+  font-size: 20px;
+}
+.stat-value {
+  font-size: 14px;
+}

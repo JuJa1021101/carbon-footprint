@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "环保活动管理",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "icon-image": "../../components/IconImage"
+  }
+}

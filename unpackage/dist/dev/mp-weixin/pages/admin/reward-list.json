@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "积分商城奖品管理",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "icon-image": "../../components/IconImage"
+  }
+}

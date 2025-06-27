@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社区 - 环保小程序</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .tag {
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-size: 12px;
+      background-color: rgba(76, 175, 80, 0.1);
+      color: #4CAF50;
+    }
+
+    .search-bar {
+      border-radius: 20px;
+    }
+
+    .tab-btn {
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 3px;
+      background-color: #4CAF50;
+      border-radius: 3px;
+    }
+
+    .fab-button {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      border-radius: 28px;
+      background-color: #4CAF50;
+      box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <div class="px-4 pt-10 pb-4 bg-white">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-xl font-bold">环保社区</h1>
+      <i class="fas fa-ellipsis-h text-gray-500"></i>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="relative">
+      <input type="text" class="search-bar w-full bg-gray-100 py-2 px-4 pr-10 text-sm" placeholder="搜索社区内容...">
+      <i class="fas fa-search absolute right-3 top-2.5 text-gray-400"></i>
+    </div>
+  </div>
+
+  <!-- 标签筛选 -->
+  <div class="px-4 py-3 bg-white border-b">
+    <div class="flex justify-around">
+      <div class="tab-btn active font-medium">推荐</div>
+      <div class="tab-btn text-gray-500">最新</div>
+      <div class="tab-btn text-gray-500">热门</div>
+      <div class="tab-btn text-gray-500">关注</div>
+    </div>
+  </div>
+
+  <!-- 内容区 -->
+  <div class="p-4">
+    <!-- 帖子卡片 -->
+    <div class="card bg-white shadow-sm mb-4">
+      <div class="p-3">
+        <!-- 用户信息 -->
+        <div class="flex items-center mb-3">
+          <img src="https://i.pravatar.cc/100?img=11" alt="用户头像" class="avatar mr-3">
+          <div>
+            <h3 class="font-medium text-sm">绿色生活家</h3>
+            <p class="text-xs text-gray-500">2小时前</p>
+          </div>
+          <button class="ml-auto text-green-500 text-sm px-3 py-1 rounded-full border border-green-500">+ 关注</button>
+        </div>
+
+        <!-- 帖子内容 -->
+        <p class="text-sm mb-3">分享一个超实用的废旧纸盒改造方法，做成收纳盒不仅美观还环保！#创意改造 #废物利用</p>
+
+        <!-- 图片 -->
+        <div class="grid grid-cols-2 gap-2 mb-3">
+          <img src="https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg" alt="纸盒改造前"
+            class="w-full h-32 object-cover rounded-lg">
+          <img src="https://images.pexels.com/photos/4498140/pexels-photo-4498140.jpeg" alt="纸盒改造后"
+            class="w-full h-32 object-cover rounded-lg">
+        </div>
+
+        <!-- 标签 -->
+        <div class="flex space-x-2 mb-3">
+          <span class="tag"># 创意改造</span>
+          <span class="tag"># 废物利用</span>
+        </div>
+
+        <!-- 互动数据 -->
+        <div class="flex justify-between text-gray-500 text-sm border-t pt-3">
+          <div class="flex items-center">
+            <i class="far fa-eye mr-1"></i>
+            <span>356</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-heart mr-1"></i>
+            <span>42</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-comment mr-1"></i>
+            <span>18</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-bookmark mr-1"></i>
+            <span>收藏</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-sm mb-4">
+      <div class="p-3">
+        <!-- 用户信息 -->
+        <div class="flex items-center mb-3">
+          <img src="https://i.pravatar.cc/100?img=22" alt="用户头像" class="avatar mr-3">
+          <div>
+            <h3 class="font-medium text-sm">环保达人</h3>
+            <p class="text-xs text-gray-500">昨天</p>
+          </div>
+          <button class="ml-auto text-gray-400 text-sm px-3 py-1 rounded-full border border-gray-300">已关注</button>
+        </div>
+
+        <!-- 帖子内容 -->
+        <p class="text-sm mb-3">今天参加了河道清洁活动，大家的环保意识越来越强了！三小时清理出这么多垃圾，希望下次不再有！#志愿活动 #环保行动</p>
+
+        <!-- 图片 -->
+        <div class="mb-3">
+          <img src="https://images.pexels.com/photos/2990644/pexels-photo-2990644.jpeg" alt="河道清洁活动"
+            class="w-full h-48 object-cover rounded-lg">
+        </div>
+
+        <!-- 标签 -->
+        <div class="flex space-x-2 mb-3">
+          <span class="tag"># 志愿活动</span>
+          <span class="tag"># 环保行动</span>
+        </div>
+
+        <!-- 互动数据 -->
+        <div class="flex justify-between text-gray-500 text-sm border-t pt-3">
+          <div class="flex items-center">
+            <i class="far fa-eye mr-1"></i>
+            <span>209</span>
+          </div>
+          <div class="flex items-center text-red-500">
+            <i class="fas fa-heart mr-1"></i>
+            <span>67</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-comment mr-1"></i>
+            <span>24</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-bookmark mr-1"></i>
+            <span>收藏</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-sm">
+      <div class="p-3">
+        <!-- 用户信息 -->
+        <div class="flex items-center mb-3">
+          <img src="https://i.pravatar.cc/100?img=33" alt="用户头像" class="avatar mr-3">
+          <div>
+            <h3 class="font-medium text-sm">低碳生活馆</h3>
+            <p class="text-xs text-gray-500">3天前</p>
+          </div>
+          <button class="ml-auto text-green-500 text-sm px-3 py-1 rounded-full border border-green-500">+ 关注</button>
+        </div>
+
+        <!-- 帖子内容 -->
+        <p class="text-sm mb-3">【省水小窍门】洗菜水可以用来浇花，洗衣服最后一遍的清水可以用来拖地，这些循环用水的方法每月能省下不少水费！#节约用水 #生活技巧</p>
+
+        <!-- 视频封面 -->
+        <div class="relative mb-3">
+          <img src="https://images.pexels.com/photos/7879909/pexels-photo-7879909.jpeg" alt="省水小窍门"
+            class="w-full h-48 object-cover rounded-lg">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 bg-black bg-opacity-50 rounded-full flex items-center justify-center">
+              <i class="fas fa-play text-white text-xl"></i>
+            </div>
+          </div>
+          <div class="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded">01:45</div>
+        </div>
+
+        <!-- 标签 -->
+        <div class="flex space-x-2 mb-3">
+          <span class="tag"># 节约用水</span>
+          <span class="tag"># 生活技巧</span>
+        </div>
+
+        <!-- 互动数据 -->
+        <div class="flex justify-between text-gray-500 text-sm border-t pt-3">
+          <div class="flex items-center">
+            <i class="far fa-eye mr-1"></i>
+            <span>489</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-heart mr-1"></i>
+            <span>93</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-comment mr-1"></i>
+            <span>36</span>
+          </div>
+          <div class="flex items-center">
+            <i class="far fa-bookmark mr-1"></i>
+            <span>收藏</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 发布按钮 -->
+  <div class="fab-button">
+    <i class="fas fa-plus"></i>
+  </div>
+</body>
+
+</html>

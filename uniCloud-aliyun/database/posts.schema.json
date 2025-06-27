@@ -1,0 +1,71 @@
+{
+  "bsonType": "object",
+  "required": ["content", "userId", "createdAt"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "userId": {
+      "bsonType": "string",
+      "description": "发布用户ID",
+      "title": "用户ID"
+    },
+    "content": {
+      "bsonType": "string",
+      "description": "帖子内容",
+      "title": "内容",
+      "maxLength": 1000
+    },
+    "images": {
+      "bsonType": "array",
+      "description": "帖子图片",
+      "title": "图片",
+      "items": {
+        "bsonType": "string"
+      }
+    },
+    "label": {
+      "bsonType": "string",
+      "description": "标签",
+      "title": "标签"
+    },
+    "eyes": {
+      "bsonType": "int",
+      "description": "查看次数",
+      "title": "浏览量",
+      "defaultValue": 0
+    },
+    "likes": {
+      "bsonType": "int",
+      "description": "点赞数量",
+      "title": "点赞量",
+      "defaultValue": 0
+    },
+    "comments": {
+      "bsonType": "int",
+      "description": "评论数量",
+      "title": "评论量",
+      "defaultValue": 0
+    },
+    "createdAt": {
+      "bsonType": "timestamp",
+      "description": "发布时间",
+      "title": "发布时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    },
+    "isTop": {
+      "bsonType": "bool",
+      "description": "是否置顶",
+      "title": "是否置顶",
+      "defaultValue": false
+    }
+  }
+} 

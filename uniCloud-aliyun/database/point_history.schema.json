@@ -1,0 +1,40 @@
+{
+  "bsonType": "object",
+  "required": ["user_id", "operation_type", "delta_point", "before_point", "after_point"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "description": "用户ID，关联用户表",
+      "foreignKey": "users._id"
+    },
+    "operation_type": {
+      "bsonType": "string",
+      "description": "操作类型，如login_bonus, redemption等"
+    },
+    "delta_point": {
+      "bsonType": "int",
+      "description": "积分变动值（正/负）"
+    },
+    "before_point": {
+      "bsonType": "int",
+      "description": "变动前积分余额"
+    },
+    "after_point": {
+      "bsonType": "int",
+      "description": "变动后积分余额"
+    },
+    "created_at": {
+      "bsonType": "timestamp",
+      "description": "操作时间"
+    }
+  }
+} 

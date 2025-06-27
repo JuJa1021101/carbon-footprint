@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "编辑环保活动",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "icon-image": "../../components/IconImage"
+  }
+}

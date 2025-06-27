@@ -1,0 +1,242 @@
+/* 将在线字体图标改为SVG图标CSS */
+.icon-eye {
+  background-image: url('../images/icons/icon-eye.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.icon-like {
+  background-image: url('../images/icons/icon-like.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.icon-heart {
+  background-image: url('../images/icons/icon-heart.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.icon-comment {
+  background-image: url('../images/icons/icon-comment.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+/* 其他通用样式 */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: local('iconfont');
+  /* 删除远程字体引用，改为本地图片实现 */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 首页图标 */
+.icon-home:before {
+  content: "";
+}
+
+/* 社区图标 */
+.icon-users:before {
+  content: "";
+}
+
+/* 打卡图标 */
+.icon-leaf:before {
+  content: "";
+}
+
+/* 商城图标 */
+.icon-gift:before {
+  content: "";
+}
+
+/* 我的图标 */
+.icon-user:before {
+  content: "";
+}
+
+/* 通用图标 */
+.icon-search:before {
+  content: "\e741";
+}
+
+.icon-notification:before {
+  content: "\e75a";
+}
+
+.icon-calendar:before {
+  content: "\e746";
+}
+
+.icon-location:before {
+  content: "\e768";
+}
+
+.icon-heart-fill:before {
+  content: "\e849";
+}
+
+.icon-bookmark:before {
+  content: "\e832";
+}
+
+.icon-more:before {
+  content: "\e847";
+}
+
+.icon-plus:before {
+  content: "\e7fe";
+}
+
+.icon-play:before {
+  content: "\e830";
+}
+
+.icon-trash:before {
+  content: "\e82e";
+}
+
+.icon-recycle:before {
+  content: "\e82f";
+}
+
+.icon-bicycle:before {
+  content: "\e82c";
+}
+
+.icon-bolt:before {
+  content: "\e82d";
+}
+
+.icon-down:before {
+  content: "\e7fe";
+}
+
+.icon-history:before {
+  content: "\e846";
+}
+
+.icon-right:before {
+  content: "\e800";
+}
+
+.icon-settings:before {
+  content: "\e78f";
+}
+
+.icon-edit:before {
+  content: "\e764";
+}
+
+.icon-trophy:before {
+  content: "\e753";
+}
+
+.icon-clipboard:before {
+  content: "\e634";
+}
+
+.icon-medal:before {
+  content: "\e753";
+}
+
+.icon-seedling:before {
+  content: "\e6ad";
+}
+
+.icon-water:before {
+  content: "\e62c";
+}
+
+.icon-sun:before {
+  content: "\e668";
+}
+
+.icon-headset:before {
+  content: "\e620";
+}
+
+.icon-shopping-bag:before {
+  content: "\e748";
+}
+
+.icon-check:before {
+  content: "\e7fc";
+}
+
+.icon-close:before {
+  content: "\e7fd";
+}
+
+.icon-minus:before {
+  content: "\e7ff";
+}
+
+.icon-left:before {
+  content: "\e7ff";
+}
+
+.icon-up:before {
+  content: "\e801";
+}
+
+.icon-checkin:before {
+  content: "\e763";
+}
+
+.icon-mall:before {
+  content: "\e7d0";
+}
+
+.icon-notification:before {
+  content: "\e75a";
+}
+
+.icon-service:before {
+  content: "\e757";
+}
+
+.icon-question:before {
+  content: "\e752";
+}
+
+.icon-water-drop:before {
+  content: "\e844";
+}
+
+.icon-bulb:before {
+  content: "\e845";
+}
+
+.icon-community:before {
+  content: "\e758";
+}

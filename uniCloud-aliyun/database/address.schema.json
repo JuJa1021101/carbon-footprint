@@ -1,0 +1,56 @@
+{
+  "bsonType": "object",
+  "required": ["receiver", "phone", "add", "addall"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "description": "用户ID",
+      "foreignKey": "users._id"
+    },
+    "receiver": {
+      "bsonType": "string",
+      "description": "收货人姓名",
+      "title": "收货人",
+      "trim": "both"
+    },
+    "phone": {
+      "bsonType": "string",
+      "description": "联系电话",
+      "title": "手机号码",
+      "trim": "both"
+    },
+    "add": {
+      "bsonType": "string",
+      "description": "所在地区",
+      "title": "所在地区",
+      "trim": "both"
+    },
+    "addall": {
+      "bsonType": "string",
+      "description": "详细地址",
+      "title": "详细地址",
+      "trim": "both"
+    },
+    "isDefault": {
+      "bsonType": "bool",
+      "description": "是否为默认地址",
+      "title": "默认地址"
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+} 

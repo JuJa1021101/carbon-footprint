@@ -1,0 +1,353 @@
+
+.container {
+  background-color: #f8f9fa;
+  font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  padding-bottom: 80px;
+}
+.search-container {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 0;
+  height: 36px;
+  box-sizing: border-box;
+}
+.search-input {
+  flex: 1;
+  height: 36px;
+  background-color: transparent;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 15px;
+  font-size: 14px;
+  color: #666;
+  box-sizing: border-box;
+}
+.search-icon-wrapper, .clear-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+.clear-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-status {
+  background-color: rgba(76, 175, 80, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+.top-2-5 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.right-10 {
+  right: 40px;
+}
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+}
+.tag {
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 12px;
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.space-left {
+  margin-left: 8px;
+}
+.tab-btn {
+  position: relative;
+  padding-bottom: 10px;
+}
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 20px;
+  height: 3px;
+  background-color: #4CAF50;
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
+.float-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+}
+.float-btn-inner {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #4CAF50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+.plus-text {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  margin-top: -2px; /* 轻微上移调整垂直位置 */
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.gap-2 {
+  gap: 8px;
+}
+.grid-item {
+  width: 100%;
+  height: 128px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.more-images {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.w-full {
+  width: 100%;
+}
+.h-48 {
+  height: 192px;
+}
+.object-cover {
+  object-fit: cover;
+}
+.rounded-lg {
+  border-radius: 8px;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.bg-black-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-black-60 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.w-12 {
+  width: 48px;
+}
+.h-12 {
+  height: 48px;
+}
+.w-32 {
+  width: 128px;
+}
+.h-32 {
+  height: 128px;
+}
+.w-14 {
+  width: 56px;
+}
+.h-14 {
+  height: 56px;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.text-white {
+  color: white;
+}
+.text-xl {
+  font-size: 20px;
+}
+.text-xs {
+  font-size: 12px;
+}
+.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.bottom-2 {
+  bottom: 8px;
+}
+.right-2 {
+  right: 8px;
+}
+.icon-size {
+  width: 16px;
+  height: 16px;
+}
+.plus-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 工具类 */
+.px-4 { padding-left: 16px; padding-right: 16px;
+}
+.pt-10 { padding-top: 40px;
+}
+.pb-4 { padding-bottom: 16px;
+}
+.py-3 { padding-top: 12px; padding-bottom: 12px;
+}
+.p-4 { padding: 16px;
+}
+.p-3 { padding: 12px;
+}
+.pt-3 { padding-top: 12px;
+}
+.px-3 { padding-left: 12px; padding-right: 12px;
+}
+.py-1 { padding-top: 4px; padding-bottom: 4px;
+}
+.px-2 { padding-left: 8px; padding-right: 8px;
+}
+.py-10 { padding-top: 40px; padding-bottom: 40px;
+}
+.py-4 { padding-top: 16px; padding-bottom: 16px;
+}
+.mb-4 { margin-bottom: 16px;
+}
+.mb-3 { margin-bottom: 12px;
+}
+.mr-3 { margin-right: 12px;
+}
+.mr-1 { margin-right: 4px;
+}
+.ml-auto { margin-left: auto;
+}
+.ml-2 { margin-left: 8px;
+}
+.mt-3 { margin-top: 12px;
+}
+.bg-white { background-color: #ffffff;
+}
+.bg-gray-100 { background-color: #f3f4f6;
+}
+.text-gray-400 { color: #9ca3af;
+}
+.text-gray-500 { color: #6b7280;
+}
+.text-green-500 { color: #4CAF50;
+}
+.text-red-500 { color: #ef4444;
+}
+.flex { display: flex;
+}
+.items-center { align-items: center;
+}
+.justify-between { justify-content: space-between;
+}
+.justify-around { justify-content: space-around;
+}
+.justify-center { justify-content: center;
+}
+.flex-col { flex-direction: column;
+}
+.flex-wrap { flex-wrap: wrap;
+}
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e5e7eb;
+}
+.border-t { border-top-width: 1px; border-top-style: solid; border-top-color: #e5e7eb;
+}
+.border { border-width: 1px; border-style: solid;
+}
+.border-green-500 { border-color: #4CAF50;
+}
+.border-gray-300 { border-color: #d1d5db;
+}
+.w-full { width: 100%;
+}
+.h-48 { height: 192px;
+}
+.w-14 { width: 56px;
+}
+.h-14 { height: 56px;
+}
+.rounded-lg { border-radius: 8px;
+}
+.rounded-full { border-radius: 9999px;
+}
+.object-cover { object-fit: cover;
+}
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.gap-2 { gap: 8px;
+}
+.relative { position: relative;
+}
+.absolute { position: absolute;
+}
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0;
+}
+.right-3 { right: 12px;
+}
+.top-2-5 { top: 10px;
+}
+.bottom-2 { bottom: 8px;
+}
+.right-2 { right: 8px;
+}
+.search-input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+.search-input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
