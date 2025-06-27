@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页 - 环保小程序</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    .search-bar {
+      border-radius: 20px;
+    }
+
+    .nav-pill {
+      border-radius: 16px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+
+    .active-pill {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .green-tag {
+      background-color: rgba(76, 175, 80, 0.1);
+      color: #4CAF50;
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <div class="px-4 pt-10 pb-4 bg-white">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-xl font-bold">环保先锋</h1>
+      <div class="flex">
+        <div class="mr-4">
+          <i class="fas fa-bell text-gray-500"></i>
+        </div>
+        <div>
+          <i class="fas fa-calendar-alt text-gray-500"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="relative">
+      <input type="text" class="search-bar w-full bg-gray-100 py-2 px-4 pr-10 text-sm" placeholder="搜索环保知识、活动...">
+      <i class="fas fa-search absolute right-3 top-2.5 text-gray-400"></i>
+    </div>
+  </div>
+
+  <!-- 分类导航 -->
+  <div class="px-4 py-4 bg-white">
+    <div class="flex overflow-x-auto space-x-3 pb-2">
+      <div class="nav-pill active-pill flex-shrink-0">全部</div>
+      <div class="nav-pill bg-gray-100 flex-shrink-0">垃圾分类</div>
+      <div class="nav-pill bg-gray-100 flex-shrink-0">节能减排</div>
+      <div class="nav-pill bg-gray-100 flex-shrink-0">资源回收</div>
+      <div class="nav-pill bg-gray-100 flex-shrink-0">低碳生活</div>
+    </div>
+  </div>
+
+  <!-- 内容区 -->
+  <div class="p-4">
+    <!-- 推荐环保知识 -->
+    <div class="mb-6">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-lg font-semibold">环保知识</h2>
+        <a href="#" class="text-sm text-gray-500">查看更多 <i class="fas fa-chevron-right text-xs"></i></a>
+      </div>
+
+      <!-- 知识卡片 -->
+      <div class="card bg-white shadow-sm mb-4">
+        <img src="https://images.pexels.com/photos/802221/pexels-photo-802221.jpeg" alt="垃圾分类"
+          class="w-full h-32 object-cover">
+        <div class="p-3">
+          <div class="flex space-x-2 mb-2">
+            <span class="green-tag">垃圾分类</span>
+          </div>
+          <h3 class="font-medium mb-2">一张图看懂家庭垃圾如何正确分类</h3>
+          <div class="flex items-center text-gray-500 text-xs">
+            <i class="far fa-eye mr-1"></i>
+            <span>1234</span>
+            <i class="far fa-thumbs-up mx-2"></i>
+            <span>56</span>
+            <span class="ml-auto">3小时前</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-white shadow-sm">
+        <div class="flex">
+          <div class="p-3 flex-grow">
+            <div class="flex space-x-2 mb-2">
+              <span class="green-tag">节能减排</span>
+            </div>
+            <h3 class="font-medium mb-2">日常用电小窍门，轻松节能30%</h3>
+            <div class="flex items-center text-gray-500 text-xs">
+              <i class="far fa-eye mr-1"></i>
+              <span>867</span>
+              <i class="far fa-thumbs-up mx-2"></i>
+              <span>42</span>
+              <span class="ml-auto">昨天</span>
+            </div>
+          </div>
+          <div class="w-24 h-24 mr-3 my-auto">
+            <img src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg" alt="节能减排"
+              class="w-full h-full object-cover rounded-md">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 公益活动 -->
+    <div>
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="text-lg font-semibold">公益活动</h2>
+        <a href="#" class="text-sm text-gray-500">查看更多 <i class="fas fa-chevron-right text-xs"></i></a>
+      </div>
+
+      <!-- 活动卡片 -->
+      <div class="card bg-white shadow-sm mb-4">
+        <div class="p-3">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="font-medium">城市河道清洁志愿行动</h3>
+            <span class="text-yellow-500 text-xs font-semibold">报名中</span>
+          </div>
+          <p class="text-gray-500 text-sm mb-3">一起行动，清洁我们的城市河道，保护水资源</p>
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-gray-400 mr-1"></i>
+              <span>城东河滨公园</span>
+            </div>
+            <div class="flex items-center">
+              <i class="far fa-calendar text-gray-400 mr-1"></i>
+              <span>6月15日 09:00</span>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center">
+            <div class="flex -space-x-2">
+              <img src="https://i.pravatar.cc/100?img=1" class="w-6 h-6 rounded-full border border-white">
+              <img src="https://i.pravatar.cc/100?img=2" class="w-6 h-6 rounded-full border border-white">
+              <img src="https://i.pravatar.cc/100?img=3" class="w-6 h-6 rounded-full border border-white">
+            </div>
+            <span class="text-xs text-gray-500 ml-2">32人已报名</span>
+            <button class="ml-auto bg-green-50 text-green-600 text-sm px-4 py-1 rounded-full">立即报名</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-white shadow-sm">
+        <div class="p-3">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="font-medium">废旧电池回收换礼品</h3>
+            <span class="text-green-500 text-xs font-semibold">进行中</span>
+          </div>
+          <p class="text-gray-500 text-sm mb-3">回收旧电池，保护环境，还能换取环保小礼品</p>
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-gray-400 mr-1"></i>
+              <span>市民服务中心</span>
+            </div>
+            <div class="flex items-center">
+              <i class="far fa-calendar text-gray-400 mr-1"></i>
+              <span>6月1日-30日</span>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center">
+            <div class="flex -space-x-2">
+              <img src="https://i.pravatar.cc/100?img=4" class="w-6 h-6 rounded-full border border-white">
+              <img src="https://i.pravatar.cc/100?img=5" class="w-6 h-6 rounded-full border border-white">
+              <img src="https://i.pravatar.cc/100?img=6" class="w-6 h-6 rounded-full border border-white">
+            </div>
+            <span class="text-xs text-gray-500 ml-2">120人已参与</span>
+            <button class="ml-auto bg-green-50 text-green-600 text-sm px-4 py-1 rounded-full">查看详情</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+.header {
+  padding-top: 44px;
+  padding-bottom: 12px;
+  box-sizing: content-box;
+  background-color: #4CAF50;
+}
+.knowledge-detail {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px; /* 为底部工具栏留出空间 */
+}
+.content-section {
+  background-color: #fff;
+  padding: 20px 16px;
+  margin-bottom: 10px;
+}
+.env-knowledge-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+.env-knowledge-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+.image-section {
+  padding: 16px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.knowledge-image {
+  width: 100%;
+  border-radius: 8px;
+}
+.tags-time-section {
+  padding: 16px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag-pill {
+  display: inline-block;
+  font-size: 12px;
+  color: #4CAF50;
+  background-color: #e8f5e9;
+  padding: 4px 12px;
+  border-radius: 16px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.time {
+  font-size: 12px;
+  color: #999;
+}
+.footer-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  padding: 10px 16px;
+  z-index: 100;
+}
+.footer-left, .footer-center, .footer-right {
+  display: flex;
+  align-items: center;
+}
+.footer-center {
+  flex: 1;
+  justify-content: center;
+}
+.footer-stat {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  color: #666;
+}
+.footer-stat.liked {
+  color: #ff5252;
+}
+.footer-stat .iconfont {
+  margin-right: 4px;
+  font-size: 20px;
+}
+.share-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* 工具类 */
+.flex { display: flex;
+}
+.flex-1 { flex: 1;
+}
+.items-center { align-items: center;
+}
+.justify-center { justify-content: center;
+}
+.justify-between { justify-content: space-between;
+}
+.text-center { text-align: center;
+}
+.text-white { color: #ffffff;
+}
+.text-lg { font-size: 18px;
+}
+.font-medium { font-weight: 500;
+}
+.bg-green { background-color: #4CAF50;
+}
+.px-4 { padding-left: 16px; padding-right: 16px;
+}
+.py-3 { padding-top: 12px; padding-bottom: 12px;
+}
+.w-24px { width: 24px;
+}
+.more-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.more-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* 将图标变为白色 */
+}
+.back-icon {
+  width: 18px;
+  height: 18px;
+}

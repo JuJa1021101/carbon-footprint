@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "编辑商品",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "icon-image": "../../components/IconImage"
+  }
+}

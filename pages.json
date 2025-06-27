@@ -1,0 +1,296 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/admin/activity-list",
+			"style": {
+				"navigationBarTitleText": "环保活动管理",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/activity-add",
+			"style": {
+				"navigationBarTitleText": "添加环保活动",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/activity-edit",
+			"style": {
+				"navigationBarTitleText": "编辑环保活动",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/reward-list",
+			"style": {
+				"navigationBarTitleText": "积分商城奖品管理",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/reward-add",
+			"style": {
+				"navigationBarTitleText": "添加商品",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/reward-edit",
+			"style": {
+				"navigationBarTitleText": "编辑商品",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/knowledge-list",
+			"style": {
+				"navigationBarTitleText": "环保知识管理",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/knowledge-add",
+			"style": {
+				"navigationBarTitleText": "添加环保知识",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/knowledge-edit",
+			"style": {
+				"navigationBarTitleText": "编辑环保知识",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/knowledge-list",
+			"style": {
+				"navigationBarTitleText": "环保知识与小贴士",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/knowledge-detail",
+			"style": {
+				"navigationBarTitleText": "知识详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/activity-list",
+			"style": {
+				"navigationBarTitleText": "公益活动",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/activity-detail",
+			"style": {
+				"navigationBarTitleText": "活动详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "环保先锋",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/community/community",
+			"style": {
+				"navigationBarTitleText": "社区",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/community/post-detail",
+			"style": {
+				"navigationBarTitleText": "帖子详情",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/community/post-publish",
+			"style": {
+				"navigationBarTitleText": "发布动态",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/checkin/checkin",
+			"style": {
+				"navigationBarTitleText": "打卡",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/mall/mall",
+			"style": {
+				"navigationBarTitleText": "积分商城",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/profile/edit",
+			"style": {
+				"navigationBarTitleText": "编辑个人信息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/profile/settings",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/profile/address",
+			"style": {
+				"navigationBarTitleText": "收货地址",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/profile/address-edit",
+			"style": {
+				"navigationBarTitleText": "编辑地址",
+				"navigationStyle": "custom"
+			}
+		},
+		
+		{
+			"path": "pages/admin/login",
+			"style": {
+				"navigationBarTitleText": "管理员登录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/dashboard",
+			"style": {
+				"navigationBarTitleText": "管理员控制台",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/reset-points",
+			"style": {
+				"navigationBarTitleText": "积分系统重置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/knowledge-static",
+			"style": {
+				"navigationBarTitleText": "环保知识详情",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#4CAF50",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/images/tab/tab-home.png",
+				"selectedIconPath": "static/images/tab/tab-home-active.png"
+			},
+			{
+				"pagePath": "pages/community/community",
+				"text": "社区",
+				"iconPath": "static/images/tab/tab-community.png",
+				"selectedIconPath": "static/images/tab/tab-community-active.png"
+			},
+			{
+				"pagePath": "pages/checkin/checkin",
+				"text": "打卡",
+				"iconPath": "static/images/tab/tab-checkin.png",
+				"selectedIconPath": "static/images/tab/tab-checkin-active.png"
+			},
+			{
+				"pagePath": "pages/mall/mall",
+				"text": "积分商城",
+				"iconPath": "static/images/tab/tab-mall.png",
+				"selectedIconPath": "static/images/tab/tab-mall-active.png"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"text": "我的",
+				"iconPath": "static/images/tab/tab-profile.png",
+				"selectedIconPath": "static/images/tab/tab-profile-active.png"
+			}
+		]
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+			"^icon-(.*)": "./components/IconImage.vue"
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "环保先锋",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

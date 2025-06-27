@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/admin/activity-list",
+    "pages/admin/activity-add",
+    "pages/admin/activity-edit",
+    "pages/admin/reward-list",
+    "pages/admin/reward-add",
+    "pages/admin/reward-edit",
+    "pages/admin/knowledge-list",
+    "pages/admin/knowledge-add",
+    "pages/admin/knowledge-edit",
+    "pages/home/knowledge-list",
+    "pages/home/knowledge-detail",
+    "pages/home/activity-list",
+    "pages/home/activity-detail",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/community/community",
+    "pages/community/post-detail",
+    "pages/community/post-publish",
+    "pages/checkin/checkin",
+    "pages/mall/mall",
+    "pages/profile/profile",
+    "pages/profile/edit",
+    "pages/profile/settings",
+    "pages/profile/address",
+    "pages/profile/address-edit",
+    "pages/admin/login",
+    "pages/admin/dashboard",
+    "pages/admin/reset-points",
+    "pages/home/knowledge-static"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "环保先锋",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#4CAF50",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/images/tab/tab-home.png",
+        "selectedIconPath": "static/images/tab/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "static/images/tab/tab-community.png",
+        "selectedIconPath": "static/images/tab/tab-community-active.png"
+      },
+      {
+        "pagePath": "pages/checkin/checkin",
+        "text": "打卡",
+        "iconPath": "static/images/tab/tab-checkin.png",
+        "selectedIconPath": "static/images/tab/tab-checkin-active.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "积分商城",
+        "iconPath": "static/images/tab/tab-mall.png",
+        "selectedIconPath": "static/images/tab/tab-mall-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "static/images/tab/tab-profile.png",
+        "selectedIconPath": "static/images/tab/tab-profile-active.png"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {}
+}

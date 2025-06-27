@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../../Software/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvY2hlY2tpbi9pbmRleC52dWU"],"sourcesContent":["import MiniProgramPage from 'D:/Documents/HBuilderProjects/CarbonFootprint/pages/checkin/index.vue'\nwx.createPage(MiniProgramPage)"],"names":["MiniProgramPage"],"mappings":";;;;;;;;;AACA,GAAG,WAAWA,SAAe;"}

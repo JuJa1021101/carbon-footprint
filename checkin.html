@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打卡 - 环保小程序</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .badge-large {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f1f9f2;
+      color: #4CAF50;
+    }
+
+    .progress-bar {
+      height: 6px;
+      border-radius: 3px;
+      background-color: #e9ecef;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      border-radius: 3px;
+      background-color: #4CAF50;
+    }
+
+    .tab-btn {
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 3px;
+      background-color: #4CAF50;
+      border-radius: 3px;
+    }
+
+    .btn-checkin {
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 24px;
+      padding: 12px 32px;
+      font-weight: 600;
+    }
+
+    .btn-checkin-outline {
+      border: 1px solid #4CAF50;
+      color: #4CAF50;
+      border-radius: 24px;
+      padding: 12px 24px;
+      font-weight: 600;
+      background-color: white;
+    }
+
+    .tag {
+      background-color: rgba(76, 175, 80, 0.1);
+      color: #4CAF50;
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <div class="px-4 pt-10 pb-4 bg-white">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-xl font-bold">环保打卡</h1>
+      <div class="relative">
+        <i class="fas fa-history text-gray-500"></i>
+        <span
+          class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-xs flex items-center justify-center">3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 环保积分状态 -->
+  <div class="p-4 bg-white">
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <p class="text-sm text-gray-500">我的环保积分</p>
+        <div class="flex items-baseline">
+          <h2 class="text-3xl font-bold mr-2">485</h2>
+          <span class="text-xs text-red-500">+15</span>
+        </div>
+      </div>
+      <div class="bg-green-50 text-green-600 px-3 py-1 rounded-full text-xs">
+        环保达人 Lv.3
+      </div>
+    </div>
+
+    <div class="mb-2">
+      <div class="flex justify-between text-sm mb-1">
+        <span>升级进度</span>
+        <span class="text-green-500">485/500</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 97%"></div>
+      </div>
+    </div>
+    <p class="text-xs text-gray-500">再获得15积分即可升级到环保先锋Lv.4</p>
+  </div>
+
+  <!-- 标签筛选 -->
+  <div class="px-4 py-3 bg-white border-b mt-2">
+    <div class="flex justify-around">
+      <div class="tab-btn active font-medium">行为打卡</div>
+      <div class="tab-btn text-gray-500">我的记录</div>
+    </div>
+  </div>
+
+  <!-- 打卡选项 -->
+  <div class="p-4">
+    <h3 class="text-lg font-semibold mb-4">今日可打卡项目</h3>
+
+    <!-- 垃圾分类打卡项 -->
+    <div class="card bg-white shadow-sm mb-4">
+      <div class="p-4 flex">
+        <div class="badge-large mr-4">
+          <i class="fas fa-trash-alt text-2xl"></i>
+          <span class="text-xs mt-1">+5分</span>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium mb-1">垃圾分类打卡</h4>
+          <p class="text-sm text-gray-500 mb-2">拍照上传今日垃圾分类情况</p>
+          <div class="flex space-x-2">
+            <span class="tag">日常任务</span>
+            <span class="tag">每日一次</span>
+          </div>
+        </div>
+        <button class="btn-checkin text-sm self-center">打卡</button>
+      </div>
+    </div>
+
+    <!-- 资源回收打卡项 -->
+    <div class="card bg-white shadow-sm mb-4">
+      <div class="p-4 flex">
+        <div class="badge-large mr-4">
+          <i class="fas fa-recycle text-2xl"></i>
+          <span class="text-xs mt-1">+10分</span>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium mb-1">资源回收打卡</h4>
+          <p class="text-sm text-gray-500 mb-2">可回收物品(纸箱、塑料瓶等)回收</p>
+          <div class="flex space-x-2">
+            <span class="tag">进阶任务</span>
+            <span class="tag">每周三次</span>
+          </div>
+        </div>
+        <button class="btn-checkin text-sm self-center">打卡</button>
+      </div>
+    </div>
+
+    <!-- 低碳出行打卡项 -->
+    <div class="card bg-white shadow-sm mb-4">
+      <div class="p-4 flex">
+        <div class="badge-large mr-4">
+          <i class="fas fa-bicycle text-2xl"></i>
+          <span class="text-xs mt-1">+15分</span>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium mb-1">低碳出行打卡</h4>
+          <p class="text-sm text-gray-500 mb-2">选择步行、自行车或公共交通出行</p>
+          <div class="flex space-x-2">
+            <span class="tag">进阶任务</span>
+            <span class="tag">每日一次</span>
+          </div>
+        </div>
+        <button class="btn-checkin-outline text-sm self-center">已打卡</button>
+      </div>
+    </div>
+
+    <!-- 节能减排打卡项 -->
+    <div class="card bg-white shadow-sm mb-4">
+      <div class="p-4 flex">
+        <div class="badge-large mr-4 bg-gray-100 text-gray-400">
+          <i class="fas fa-bolt text-2xl"></i>
+          <span class="text-xs mt-1">+8分</span>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium text-gray-400 mb-1">节能减排打卡</h4>
+          <p class="text-sm text-gray-400 mb-2">一小时不使用电器，节约用电</p>
+          <div class="flex space-x-2">
+            <span class="tag bg-gray-100 text-gray-400">日常任务</span>
+            <span class="tag bg-gray-100 text-gray-400">每日一次</span>
+          </div>
+        </div>
+        <div class="text-xs text-gray-400 self-center">
+          明日可打卡
+        </div>
+      </div>
+    </div>
+
+    <!-- 查看更多按钮 -->
+    <div class="text-center mt-6">
+      <button class="text-green-500 border border-green-500 rounded-full px-6 py-2 text-sm">
+        查看更多打卡项目
+        <i class="fas fa-chevron-down ml-1"></i>
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

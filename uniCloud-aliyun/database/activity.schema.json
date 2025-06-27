@@ -1,0 +1,64 @@
+{
+  "bsonType": "object",
+  "required": ["title", "description", "activity_time", "location", "status", "point", "created_by"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "title": {
+      "bsonType": "string",
+      "description": "活动标题",
+      "title": "活动标题",
+      "maxLength": 100
+    },
+    "description": {
+      "bsonType": "string",
+      "description": "活动描述",
+      "title": "活动描述"
+    },
+    "activity_time": {
+      "bsonType": "string",
+      "description": "活动时间",
+      "title": "活动时间",
+      "maxLength": 100
+    },
+    "location": {
+      "bsonType": "string",
+      "description": "活动地点",
+      "title": "活动地点",
+      "maxLength": 200
+    },
+    "created_by": {
+      "bsonType": "string",
+      "description": "发布管理员ID",
+      "title": "发布管理员ID"
+    },
+    "status": {
+      "bsonType": "string",
+      "description": "活动状态（如"报名中""未开始""已结束"）",
+      "title": "活动状态",
+      "maxLength": 20,
+      "enum": ["报名中", "未开始", "已结束"]
+    },
+    "point": {
+      "bsonType": "int",
+      "description": "活动积分（默认0）",
+      "title": "活动积分",
+      "defaultValue": 0
+    },
+    "createdAt": {
+      "bsonType": "timestamp",
+      "description": "创建时间",
+      "title": "创建时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+} 

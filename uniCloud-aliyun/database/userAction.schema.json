@@ -1,0 +1,39 @@
+{
+  "bsonType": "object",
+  "required": ["userId", "postId", "actionType"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "userId": {
+      "bsonType": "string",
+      "description": "用户ID",
+      "title": "用户ID"
+    },
+    "postId": {
+      "bsonType": "string",
+      "description": "帖子ID",
+      "title": "帖子ID"
+    },
+    "actionType": {
+      "bsonType": "string",
+      "description": "行为类型",
+      "title": "行为类型",
+      "enum": ["like", "collect", "view"]
+    },
+    "createdAt": {
+      "bsonType": "timestamp",
+      "description": "操作时间",
+      "title": "操作时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+} 

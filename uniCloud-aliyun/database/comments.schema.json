@@ -1,0 +1,50 @@
+{
+  "bsonType": "object",
+  "required": ["userId", "postId", "content"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "userId": {
+      "bsonType": "string",
+      "description": "评论用户ID",
+      "title": "用户ID"
+    },
+    "postId": {
+      "bsonType": "string",
+      "description": "帖子ID",
+      "title": "帖子ID"
+    },
+    "content": {
+      "bsonType": "string",
+      "description": "评论内容",
+      "title": "评论内容",
+      "maxLength": 500
+    },
+    "likes": {
+      "bsonType": "int",
+      "description": "点赞数量",
+      "title": "点赞量",
+      "defaultValue": 0
+    },
+    "parentId": {
+      "bsonType": "string",
+      "description": "父评论ID（回复评论时使用）",
+      "title": "父评论ID"
+    },
+    "createdAt": {
+      "bsonType": "timestamp",
+      "description": "评论时间",
+      "title": "评论时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+} 

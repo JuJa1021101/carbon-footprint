@@ -1,0 +1,57 @@
+{
+  "bsonType": "object",
+  "required": ["title", "content", "created_at"],
+  "permission": {
+    "read": true,
+    "create": "auth.role == 'admin'",
+    "update": "auth.role == 'admin'",
+    "delete": "auth.role == 'admin'"
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "title": {
+      "bsonType": "string",
+      "description": "知识标题，如\"垃圾分类小常识\"",
+      "title": "标题"
+    },
+    "content": {
+      "bsonType": "string",
+      "description": "正文内容（支持富文本，可使用 HTML 或 Markdown 格式）",
+      "title": "内容"
+    },
+    "image": {
+      "bsonType": "string",
+      "description": "图片 URL（仅允许上传一张图片）",
+      "title": "图片",
+      "nullable": true
+    },
+    "tags": {
+      "bsonType": "array",
+      "description": "标签数组，用于分类，如[\"垃圾分类\", \"节能减排\"]",
+      "title": "标签",
+      "items": {
+        "bsonType": "string"
+      },
+      "nullable": true
+    },
+    "views": {
+      "bsonType": "int",
+      "description": "浏览数，默认为 0",
+      "title": "浏览数",
+      "defaultValue": 0
+    },
+    "likes": {
+      "bsonType": "int",
+      "description": "点赞数，默认为 0",
+      "title": "点赞数",
+      "defaultValue": 0
+    },
+    "created_at": {
+      "bsonType": "timestamp",
+      "description": "创建时间（自动填充当前时间戳）",
+      "title": "创建时间"
+    }
+  }
+} 

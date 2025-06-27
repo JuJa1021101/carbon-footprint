@@ -1,0 +1,152 @@
+/* 全局通用样式 */
+page {
+  background-color: #f8f9fa;
+  font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+
+/* 卡片样式 */
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* 标签样式 */
+.tag {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.btn-outline {
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  border-radius: 20px;
+  background-color: white;
+  font-weight: 500;
+}
+
+/* 徽章样式 */
+.badge {
+  border-radius: 16px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.badge-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 进度条样式 */
+.progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 3px;
+  background-color: #4CAF50;
+}
+
+/* 搜索框样式 */
+.search-bar {
+  border-radius: 20px;
+  background-color: #f3f4f6;
+  padding: 8px 16px;
+}
+
+/* 底部安全区适配 */
+.safe-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 加载动画样式 */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(76, 175, 80, 0.2);
+  border-top-color: #4CAF50;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.loading-text {
+  margin-top: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 悬浮按钮样式 */
+.float-btn {
+  position: fixed;
+  bottom: 100rpx;
+  right: 30rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  box-shadow: 0 6rpx 16rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.float-btn-inner {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 点赞和爱心激活状态 */
+.icon-like-active,
+.icon-heart-active {
+  color: #FF4343;
+} 

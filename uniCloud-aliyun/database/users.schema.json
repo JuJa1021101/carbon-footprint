@@ -1,0 +1,63 @@
+{
+  "bsonType": "object",
+  "required": ["account"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "account": {
+      "bsonType": "string",
+      "description": "用户账号",
+      "title": "账号",
+      "trim": "both"
+    },
+    "nickname": {
+      "bsonType": "string",
+      "description": "用户昵称",
+      "title": "昵称",
+      "trim": "both"
+    },
+    "gender": {
+      "bsonType": "string",
+      "enum": ["男", "女"],
+      "description": "性别",
+      "title": "性别"
+    },
+    "birthdate": {
+      "bsonType": "date",
+      "description": "出生日期",
+      "title": "出生日期"
+    },
+    "city": {
+      "bsonType": "string",
+      "description": "所在城市",
+      "title": "城市",
+      "trim": "both"
+    },
+    "occupation": {
+      "bsonType": "string",
+      "description": "职业",
+      "title": "职业",
+      "trim": "both"
+    },
+    "avatar": {
+      "bsonType": "string",
+      "description": "头像地址",
+      "title": "头像",
+      "trim": "both"
+    },
+    "create_date": {
+      "bsonType": "timestamp",
+      "description": "创建时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+} 

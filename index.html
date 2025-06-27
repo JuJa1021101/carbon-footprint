@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>环保小程序原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .prototype-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .phone-frame {
+      width: 390px;
+      height: 844px;
+      background: white;
+      border-radius: 45px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      margin: 30px;
+      display: inline-block;
+      border: 12px solid #000;
+    }
+
+    .status-bar {
+      height: 44px;
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 14px;
+    }
+
+    .notch {
+      position: absolute;
+      width: 150px;
+      height: 30px;
+      background: #000;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      z-index: 10;
+    }
+
+    .tab-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 83px;
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #eaeaea;
+      padding-bottom: 20px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 24px;
+      margin: 20px 0;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="prototype-container">
+    <h1 class="title">环保小程序高保真原型</h1>
+    <p class="subtitle">基于iOS设计规范，适配iPhone 15 Pro尺寸</p>
+
+    <div class="flex flex-wrap justify-center">
+      <div class="phone-frame">
+        <div class="notch"></div>
+        <div class="status-bar">
+          <span>10:30</span>
+          <span><i class="fas fa-wifi"></i> <i class="fas fa-signal"></i> <i class="fas fa-battery-full"></i></span>
+        </div>
+        <iframe src="home.html" frameborder="0" style="width:100%; height:calc(100% - 83px - 44px);"></iframe>
+        <div class="tab-bar">
+          <div class="flex flex-col items-center">
+            <i class="fas fa-home text-green-500 text-xl"></i>
+            <span class="text-xs mt-1 text-green-500">首页</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-users text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">社区</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-leaf text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">打卡</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-gift text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">积分商城</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-user text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">我的</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-frame">
+        <div class="notch"></div>
+        <div class="status-bar">
+          <span>10:30</span>
+          <span><i class="fas fa-wifi"></i> <i class="fas fa-signal"></i> <i class="fas fa-battery-full"></i></span>
+        </div>
+        <iframe src="community.html" frameborder="0" style="width:100%; height:calc(100% - 83px - 44px);"></iframe>
+        <div class="tab-bar">
+          <div class="flex flex-col items-center">
+            <i class="fas fa-home text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">首页</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-users text-green-500 text-xl"></i>
+            <span class="text-xs mt-1 text-green-500">社区</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-leaf text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">打卡</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-gift text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">积分商城</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-user text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">我的</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-frame">
+        <div class="notch"></div>
+        <div class="status-bar">
+          <span>10:30</span>
+          <span><i class="fas fa-wifi"></i> <i class="fas fa-signal"></i> <i class="fas fa-battery-full"></i></span>
+        </div>
+        <iframe src="checkin.html" frameborder="0" style="width:100%; height:calc(100% - 83px - 44px);"></iframe>
+        <div class="tab-bar">
+          <div class="flex flex-col items-center">
+            <i class="fas fa-home text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">首页</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-users text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">社区</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-leaf text-green-500 text-xl"></i>
+            <span class="text-xs mt-1 text-green-500">打卡</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-gift text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">积分商城</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-user text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">我的</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-frame">
+        <div class="notch"></div>
+        <div class="status-bar">
+          <span>10:30</span>
+          <span><i class="fas fa-wifi"></i> <i class="fas fa-signal"></i> <i class="fas fa-battery-full"></i></span>
+        </div>
+        <iframe src="mall.html" frameborder="0" style="width:100%; height:calc(100% - 83px - 44px);"></iframe>
+        <div class="tab-bar">
+          <div class="flex flex-col items-center">
+            <i class="fas fa-home text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">首页</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-users text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">社区</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-leaf text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">打卡</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-gift text-green-500 text-xl"></i>
+            <span class="text-xs mt-1 text-green-500">积分商城</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-user text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">我的</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-frame">
+        <div class="notch"></div>
+        <div class="status-bar">
+          <span>10:30</span>
+          <span><i class="fas fa-wifi"></i> <i class="fas fa-signal"></i> <i class="fas fa-battery-full"></i></span>
+        </div>
+        <iframe src="profile.html" frameborder="0" style="width:100%; height:calc(100% - 83px - 44px);"></iframe>
+        <div class="tab-bar">
+          <div class="flex flex-col items-center">
+            <i class="fas fa-home text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">首页</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-users text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">社区</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-leaf text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">打卡</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-gift text-gray-400 text-xl"></i>
+            <span class="text-xs mt-1 text-gray-400">积分商城</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-user text-green-500 text-xl"></i>
+            <span class="text-xs mt-1 text-green-500">我的</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

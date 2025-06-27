@@ -1,0 +1,172 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+.header {
+  padding-top: 44px;
+  padding-bottom: 12px;
+  box-sizing: content-box;
+}
+.bg-green {
+  background-color: #4CAF50;
+}
+.w-24px {
+  width: 24px;
+}
+.knowledge-list .empty-tip {
+  text-align: center;
+  padding: 50rpx 0;
+  color: #999;
+}
+.knowledge-list .knowledge-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #FFFFFF;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+.knowledge-list .knowledge-item .knowledge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.knowledge-list .knowledge-item .knowledge-header .knowledge-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.knowledge-list .knowledge-item .knowledge-header .more-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.knowledge-list .knowledge-item .knowledge-header .icon-more {
+  width: 16px;
+  height: 16px;
+}
+.knowledge-list .knowledge-item .knowledge-content .knowledge-image {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+  object-fit: cover;
+}
+.knowledge-list .knowledge-item .knowledge-content .knowledge-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.knowledge-list .knowledge-item .knowledge-content .knowledge-meta .knowledge-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.knowledge-list .knowledge-item .knowledge-content .knowledge-meta .knowledge-tags .tag {
+  font-size: 24rpx;
+  color: #4CAF50;
+  margin-right: 10rpx;
+}
+.knowledge-list .knowledge-item .knowledge-content .knowledge-meta .knowledge-date {
+  font-size: 24rpx;
+  color: #999;
+  white-space: nowrap;
+}
+.back-icon {
+  width: 18px;
+  height: 18px;
+}
+.float-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+}
+.float-btn-inner {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #4CAF50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+.plus-text {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  margin-top: -2px;
+  /* 轻微上移调整垂直位置 */
+}
+
+/* 工具类 */
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: #ffffff;
+}
+.text-lg {
+  font-size: 18px;
+}
+.font-medium {
+  font-weight: 500;
+}
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.p-4 {
+  padding: 16px;
+}

@@ -1,0 +1,1 @@
+<view style="{{'width:' + d + ';' + ('height:' + e)}}" class="{{['icon-wrapper', f && 'active-icon']}}"><image src="{{a}}" style="{{'width:' + b + ';' + ('height:' + c)}}" mode="aspectFit" class="icon-img"></image></view>

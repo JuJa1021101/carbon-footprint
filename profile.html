@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人中心 - 环保小程序</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .avatar-large {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .badge {
+      border-radius: 16px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 12px;
+      padding: 2px 8px;
+      font-weight: 500;
+    }
+
+    .menu-card {
+      border-radius: 16px;
+      background-color: white;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+
+    .certificate-icon {
+      font-size: 16px;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+
+    .progress-bar {
+      height: 6px;
+      border-radius: 3px;
+      background-color: rgba(76, 175, 80, 0.2);
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      border-radius: 3px;
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部个人信息 -->
+  <div class="px-4 pt-10 pb-6 bg-white">
+    <div class="flex justify-between mb-4">
+      <div></div> <!-- 占位 -->
+      <i class="fas fa-cog text-gray-500 text-xl"></i>
+    </div>
+
+    <div class="flex items-center">
+      <img src="https://i.pravatar.cc/200?img=32" alt="用户头像" class="avatar-large">
+      <div class="ml-4">
+        <div class="flex items-center">
+          <h2 class="font-bold text-lg">绿色先锋</h2>
+          <span class="badge ml-2">Lv.3</span>
+        </div>
+        <div class="text-sm text-gray-500 mt-1">ID: 12345678</div>
+        <div class="flex items-center mt-2">
+          <i class="fas fa-edit text-gray-500 mr-1"></i>
+          <span class="text-sm text-gray-500">编辑个人资料</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 环保成就 -->
+  <div class="p-4">
+    <div class="card bg-white p-4 mb-4">
+      <h3 class="font-semibold mb-3">我的环保成就</h3>
+
+      <div class="flex justify-between mb-5">
+        <div class="text-center">
+          <div class="text-xl font-bold text-green-500">485</div>
+          <div class="text-xs text-gray-500 mt-1">环保积分</div>
+        </div>
+        <div class="text-center">
+          <div class="text-xl font-bold">26</div>
+          <div class="text-xs text-gray-500 mt-1">打卡次数</div>
+        </div>
+        <div class="text-center">
+          <div class="text-xl font-bold">8</div>
+          <div class="text-xs text-gray-500 mt-1">活动参与</div>
+        </div>
+        <div class="text-center">
+          <div class="text-xl font-bold">12</div>
+          <div class="text-xs text-gray-500 mt-1">分享经验</div>
+        </div>
+      </div>
+
+      <div class="bg-green-50 rounded-lg p-3">
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-medium">环保之星</span>
+          <span class="text-xs text-green-500">97%</span>
+        </div>
+        <div class="progress-bar mb-2">
+          <div class="progress" style="width: 97%"></div>
+        </div>
+        <div class="text-xs text-gray-500">再获得15积分即可升级</div>
+      </div>
+    </div>
+
+    <!-- 环保证书 -->
+    <div class="card bg-white p-4 mb-4">
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="font-semibold">我的环保证书</h3>
+        <a href="#" class="text-sm text-gray-500">全部 <i class="fas fa-chevron-right text-xs"></i></a>
+      </div>
+
+      <div class="flex overflow-x-auto space-x-3 pb-2">
+        <div class="flex-shrink-0 text-center">
+          <div class="certificate-icon bg-green-50 text-green-500 mx-auto">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <div class="text-xs mt-2">种树达人</div>
+        </div>
+        <div class="flex-shrink-0 text-center">
+          <div class="certificate-icon bg-blue-50 text-blue-500 mx-auto">
+            <i class="fas fa-tint"></i>
+          </div>
+          <div class="text-xs mt-2">节水先锋</div>
+        </div>
+        <div class="flex-shrink-0 text-center">
+          <div class="certificate-icon bg-yellow-50 text-yellow-500 mx-auto">
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="text-xs mt-2">低碳生活</div>
+        </div>
+        <div class="flex-shrink-0 text-center">
+          <div class="certificate-icon bg-gray-50 text-gray-500 mx-auto">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <div class="text-xs mt-2">回收先锋</div>
+        </div>
+        <div class="flex-shrink-0 text-center">
+          <div class="certificate-icon bg-gray-100 text-gray-400 mx-auto">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="text-xs mt-2">环保使者</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 功能菜单 -->
+    <div class="menu-card mb-4">
+      <div class="menu-item">
+        <div class="menu-icon bg-green-50 text-green-500">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">积分明细</h4>
+          <p class="text-xs text-gray-500 mt-1">查看积分获取和消费记录</p>
+        </div>
+        <i class="fas fa-chevron-right text-gray-300"></i>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-icon bg-blue-50 text-blue-500">
+          <i class="fas fa-clipboard-list"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">行为记录</h4>
+          <p class="text-xs text-gray-500 mt-1">查看环保行为统计数据</p>
+        </div>
+        <i class="fas fa-chevron-right text-gray-300"></i>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-icon bg-purple-50 text-purple-500">
+          <i class="fas fa-medal"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">我的成就</h4>
+          <p class="text-xs text-gray-500 mt-1">查看已获得的环保成就</p>
+        </div>
+        <div class="flex items-center">
+          <span class="text-xs bg-red-500 text-white rounded-full px-1.5 py-0.5 mr-2">2</span>
+          <i class="fas fa-chevron-right text-gray-300"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-card mb-4">
+      <div class="menu-item">
+        <div class="menu-icon bg-yellow-50 text-yellow-500">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">收货地址</h4>
+          <p class="text-xs text-gray-500 mt-1">管理礼品收货地址</p>
+        </div>
+        <i class="fas fa-chevron-right text-gray-300"></i>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-icon bg-red-50 text-red-500">
+          <i class="fas fa-gift"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">我的兑换</h4>
+          <p class="text-xs text-gray-500 mt-1">查看积分兑换记录和状态</p>
+        </div>
+        <div class="flex items-center">
+          <span class="text-xs bg-red-500 text-white rounded-full px-1.5 py-0.5 mr-2">1</span>
+          <i class="fas fa-chevron-right text-gray-300"></i>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-icon bg-teal-50 text-teal-500">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">社区互动</h4>
+          <p class="text-xs text-gray-500 mt-1">评论、点赞和关注记录</p>
+        </div>
+        <i class="fas fa-chevron-right text-gray-300"></i>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-item">
+        <div class="menu-icon bg-gray-100 text-gray-500">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">联系客服</h4>
+          <p class="text-xs text-gray-500 mt-1">获取帮助和问题反馈</p>
+        </div>
+        <i class="fas fa-chevron-right text-gray-300"></i>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-icon bg-gray-100 text-gray-500">
+          <i class="fas fa-cog"></i>
+        </div>
+        <div class="flex-grow">
+          <h4 class="font-medium">设置</h4>
+          <p class="text-xs text-gray-500 mt-1">账户设置、隐私和通知</p>
+        </div>
+        <i class="fas fa-chevron-right text-gray-300"></i>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

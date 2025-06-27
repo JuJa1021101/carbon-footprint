@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>积分商城 - 环保小程序</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .product-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-bar {
+      border-radius: 20px;
+    }
+
+    .category-btn {
+      border-radius: 24px;
+      padding: 6px 14px;
+      font-size: 14px;
+      background-color: #f1f9f2;
+      color: #4CAF50;
+    }
+
+    .category-btn.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .point-tag {
+      border-radius: 12px 0 12px 0;
+      background-color: rgba(76, 175, 80, 0.9);
+      color: white;
+      padding: 3px 10px;
+      font-size: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .stock-tag {
+      background-color: #FDF6E3;
+      color: #F5A623;
+      border-radius: 10px;
+      padding: 1px 6px;
+      font-size: 10px;
+    }
+
+    .progress-bar {
+      height: 4px;
+      border-radius: 2px;
+      background-color: #e9ecef;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      border-radius: 2px;
+      background-color: #4CAF50;
+    }
+
+    .btn-exchange {
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn-exchange-disabled {
+      background-color: #e9ecef;
+      color: #adb5bd;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <div class="px-4 pt-10 pb-4 bg-white">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-xl font-bold">积分商城</h1>
+      <div class="flex">
+        <i class="fas fa-heart text-gray-500 mr-5"></i>
+        <i class="fas fa-shopping-bag text-gray-500 relative">
+          <span
+            class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-white text-xs flex items-center justify-center">2</span>
+        </i>
+      </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="relative">
+      <input type="text" class="search-bar w-full bg-gray-100 py-2 px-4 pr-10 text-sm" placeholder="搜索环保产品...">
+      <i class="fas fa-search absolute right-3 top-2.5 text-gray-400"></i>
+    </div>
+  </div>
+
+  <!-- 我的积分状态 -->
+  <div class="px-4 py-4 bg-white border-b">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-sm text-gray-500">我的环保积分</p>
+        <div class="flex items-baseline">
+          <h2 class="text-2xl font-bold mr-2">485</h2>
+          <span class="text-sm text-gray-500">可兑换</span>
+        </div>
+      </div>
+      <div class="bg-green-50 px-4 py-2 rounded-lg">
+        <p class="text-xs text-gray-500 mb-1">本月已获得积分</p>
+        <p class="text-green-500 font-semibold">+125</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分类导航 -->
+  <div class="px-4 py-3 bg-white">
+    <div class="flex overflow-x-auto space-x-3 pb-2">
+      <div class="category-btn active flex-shrink-0">全部</div>
+      <div class="category-btn flex-shrink-0">环保用品</div>
+      <div class="category-btn flex-shrink-0">绿植花卉</div>
+      <div class="category-btn flex-shrink-0">优惠券</div>
+      <div class="category-btn flex-shrink-0">限时兑换</div>
+    </div>
+  </div>
+
+  <!-- 商品列表 -->
+  <div class="p-4">
+    <!-- 限时兑换区 -->
+    <div class="mb-6">
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="text-lg font-semibold">限时兑换</h3>
+        <a href="#" class="text-sm text-gray-500">查看更多 <i class="fas fa-chevron-right text-xs"></i></a>
+      </div>
+
+      <div class="card bg-white p-3 mb-4">
+        <div class="flex items-center">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg" alt="环保帆布袋"
+              class="w-24 h-24 object-cover rounded-lg">
+            <div class="point-tag">200积分</div>
+          </div>
+          <div class="ml-4 flex-grow">
+            <h4 class="font-medium text-sm mb-1">纯棉环保购物袋</h4>
+            <div class="flex items-center mb-1">
+              <span class="stock-tag mr-2">库存10</span>
+              <span class="text-xs text-red-500">剩余：2天12小时</span>
+            </div>
+            <div class="mb-2">
+              <div class="flex justify-between text-xs mb-1">
+                <span>已兑换进度</span>
+                <span>70%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </div>
+            <button class="btn-exchange">立即兑换</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 热门兑换 -->
+    <div class="mb-6">
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="text-lg font-semibold">热门兑换</h3>
+        <a href="#" class="text-sm text-gray-500">查看更多 <i class="fas fa-chevron-right text-xs"></i></a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <!-- 产品1 -->
+        <div class="product-card">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg" alt="竹制牙刷"
+              class="w-full h-32 object-cover">
+            <div class="point-tag">120积分</div>
+          </div>
+          <div class="p-2">
+            <h4 class="font-medium text-sm mb-1">天然竹制牙刷套装</h4>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">已兑换568件</span>
+              <button class="btn-exchange text-xs">兑换</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品2 -->
+        <div class="product-card">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/6941884/pexels-photo-6941884.jpeg" alt="可降解餐具"
+              class="w-full h-32 object-cover">
+            <div class="point-tag">150积分</div>
+          </div>
+          <div class="p-2">
+            <h4 class="font-medium text-sm mb-1">可降解环保餐具套装</h4>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">已兑换325件</span>
+              <button class="btn-exchange text-xs">兑换</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 积分兑换专区 -->
+    <div>
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="text-lg font-semibold">积分兑换专区</h3>
+        <a href="#" class="text-sm text-gray-500">查看更多 <i class="fas fa-chevron-right text-xs"></i></a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <!-- 产品1 -->
+        <div class="product-card">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg" alt="桌面小盆栽"
+              class="w-full h-32 object-cover">
+            <div class="point-tag">280积分</div>
+          </div>
+          <div class="p-2">
+            <h4 class="font-medium text-sm mb-1">桌面多肉小盆栽</h4>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">已兑换112件</span>
+              <button class="btn-exchange text-xs">兑换</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品2 -->
+        <div class="product-card">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg" alt="不锈钢水杯"
+              class="w-full h-32 object-cover">
+            <div class="point-tag">350积分</div>
+          </div>
+          <div class="p-2">
+            <h4 class="font-medium text-sm mb-1">不锈钢保温水杯</h4>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">已兑换96件</span>
+              <button class="btn-exchange-disabled text-xs">积分不足</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品3 -->
+        <div class="product-card">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/2233348/pexels-photo-2233348.jpeg" alt="布质手提袋"
+              class="w-full h-32 object-cover">
+            <div class="point-tag">180积分</div>
+          </div>
+          <div class="p-2">
+            <h4 class="font-medium text-sm mb-1">印花布质手提袋</h4>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">已兑换246件</span>
+              <button class="btn-exchange text-xs">兑换</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 产品4 -->
+        <div class="product-card">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/4021939/pexels-photo-4021939.jpeg" alt="有机蔬菜券"
+              class="w-full h-32 object-cover">
+            <div class="point-tag">500积分</div>
+          </div>
+          <div class="p-2">
+            <h4 class="font-medium text-sm mb-1">有机蔬菜50元券</h4>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">已兑换78件</span>
+              <button class="btn-exchange-disabled text-xs">积分不足</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
